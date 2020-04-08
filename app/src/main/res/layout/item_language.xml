@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:padding="16.0dip">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/langFrame"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_flag"
+                style="@style/MediumImage"
+                android:layout_gravity="start"
+                android:src="@mipmap/ca" />
+
+            <TextView
+                android:id="@+id/country_name_text_view_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:gravity="center"
+                android:text="Candara" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/country_name_text_view_ss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ca"
+                android:textAppearance="@style/Body"
+                android:textColor="@color/text_dark_blue" />
+
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+
+
+    <include
+        layout="@layout/layout_horizontal_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/langFrame"
+        />
+
+</RelativeLayout>

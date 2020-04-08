@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/anytalk_bg_call"
+    android:orientation="vertical"
+    android:padding="0dp"
+    tools:context=".ChatAllEntities.MessageActivity">
+
+    <FrameLayout
+        android:id="@+id/fmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/anytalkCallerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="40dp"
+            android:text=""
+            android:textColor="#000"
+            android:fontFamily="@font/euphoria_script"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:id="@+id/cardVV"
+            android:layout_gravity="end"
+            android:layout_marginEnd="40dp"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="45dp">
+
+            <ImageView
+                android:id="@+id/anytalkCallerPic"
+                android:layout_width="90dp"
+                android:scaleType="centerCrop"
+                android:layout_height="90dp"
+                app:srcCompat="@mipmap/default_user" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/anytalk_switch_iv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentStart="true"
+            android:layout_margin="8dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/anytalk_dial_bf" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="70dp"
+            android:onClick="endCall"
+            android:background="@mipmap/anytalk_end_btn"
+            android:gravity="center"
+            android:src="@drawable/call_end" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
